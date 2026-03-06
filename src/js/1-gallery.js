@@ -1,12 +1,12 @@
 import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
 
-import img1 from "../img/1.jpg";
-import img2 from "../img/2.jpg";
-import img3 from "../img/3.jpg";
-import img12 from "../img/1-2.jpg";
-import img22 from "../img/2-2.jpg";
-import img23 from "../img/2-3.jpg";
+mport img1 from "../images/1.jpg";
+import img2 from "../images/2.jpg";
+import img3 from "../images/3.jpg";
+import img12 from "../images/1-2.jpg";
+import img22 from "../images/2-2.jpg";
+import img23 from "../images/2-3.jpg";
 
 const images = [
   { preview: img1, original: img1, description: "Image 1" },
