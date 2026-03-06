@@ -3,7 +3,7 @@ const form = document.querySelector('.feedback-form');
 form.addEventListener('input', e => {
     const formData = new FormData(form);
     const obj = {
-        name: formData.get('name'),
+        email: formData.get('email'),
         message: formData.get('message'),
     }
     const zip =JSON.stringify(obj);
@@ -11,10 +11,13 @@ form.addEventListener('input', e => {
 });
 document.addEventListener('DOMContentLoaded', (e) => {
     const zip = localStorage.getItem(STORAGE_KEY);
+    if (!zip) {
+        return;
+    }
     try {
         const data = JSON.parse(zip) || '';
         form.elements.email.value = data.email || '';
-        form.elevents.name.value = data.message || '';
+        form.elements.message.value = data.message || '';
     }
     catch{
 
@@ -27,7 +30,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
             email: formData.get('email'), 
             message: formData.get('message'),
         };
-        if (!obj.email || !obj.message) {
+        if (!obj.email && !obj.message) {
             alert('Fill please all fields');
             return;
         }
