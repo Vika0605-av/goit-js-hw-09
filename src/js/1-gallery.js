@@ -4,7 +4,7 @@ import "simplelightbox/dist/simple-lightbox.min.css";
 import img1 from "../img/1.jpg";
 import img2 from "../img/2.jpg";
 import img3 from "../img/3.jpg";
-import img12 from "../img1-2.jpg";
+import img12 from "../img/1-2.jpg";
 import img22 from "../img/2-2.jpg";
 import img23 from "../img/2-3.jpg";
 
