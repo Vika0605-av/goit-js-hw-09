@@ -1,6 +1,6 @@
 const STORAGE_KEY = 'feedback-form-state';
 const form = document.querySelector('.feedback-form');
-const formData = {
+let formData = {
     email: "",
     message: "",
 };
@@ -14,14 +14,10 @@ form.addEventListener('input', e => {
         form.elements.email.value = formData.email;
         form.elements.message.value = formData.message;
     }
-    try {
         const data = JSON.parse(zip) || '';
         form.elements.email.value = data.email || '';
         form.elements.message.value = data.message || '';
-    }
-    catch{
-
-    }
+    
     form.addEventListener('submit', e => {
         e.preventDefault();
         if (!formData.email || !formData.message) {
