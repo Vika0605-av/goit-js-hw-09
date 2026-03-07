@@ -4,16 +4,18 @@ let formData = {
     email: "",
     message: "",
 };
-form.addEventListener('input', e => {
-    formData[e.target.name] = e.target.value;
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
-}); const savedData = localStorage.getItem(STORAGE_KEY);
+
+const savedData = localStorage.getItem(STORAGE_KEY);
 
     if (savedData) {
         formData =JSON.parse(savedData);
         form.elements.email.value = formData.email;
         form.elements.message.value = formData.message;
     }
+form.addEventListener('input', e => {
+    formData[e.target.name] = e.target.value;
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
+}); 
     
     form.addEventListener('submit', e => {
         e.preventDefault();
